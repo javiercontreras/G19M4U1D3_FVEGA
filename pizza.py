@@ -24,8 +24,8 @@ class Pizza():
        self.vegetal_2 = self.imprimir_opciones(self.ing_vegetales)
        self.proteico = self.imprimir_opciones(self.ing_proteico)
        self.masa = self.imprimir_opciones(self.ing_masas)
-       self.pizza_valida = self.validar_ingrediente(self.vegetal_1, self.ing_vegetales) & self.validar_ingrediente(self.vegetal_2, self.ing_vegetales) & self.validar_ingrediente(self.proteico, self.ing_proteico) & self.validar_ingrediente(self.masa, self.ing_masas) 
-       return self.pizza_valida
+       self.valida = self.validar_ingrediente(self.vegetal_1, self.ing_vegetales) & self.validar_ingrediente(self.vegetal_2, self.ing_vegetales) & self.validar_ingrediente(self.proteico, self.ing_proteico) & self.validar_ingrediente(self.masa, self.ing_masas) 
+       pass
     
     @staticmethod
     def imprimir_opciones( lista):
@@ -59,5 +59,3 @@ if __name__=='__main__':
 
     Pizza.ingredientes_disponibles( vegetales, proteicos)
     pizza = Pizza()
-    pizza_valida = pizza.pedir_pizza()
-    print(pizza_valida)
